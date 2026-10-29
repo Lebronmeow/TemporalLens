@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="32" viewBox="0 0 168 32" role="img" aria-label="TemporalLens Studio">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#18181B"/>
+      <stop offset="1" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="detail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27272A"/>
+      <stop offset="1" stop-color="#18181B"/>
+    </linearGradient>
+    <clipPath id="shape"><rect width="168" height="32" rx="6"/></clipPath>
+  </defs>
+  <g clip-path="url(#shape)">
+    <rect width="48" height="32" fill="url(#brand)"/>
+    <rect x="48" width="120" height="32" fill="url(#detail)"/>
+    <path d="M48 0v32" stroke="#27272A"/>
+    <path d="M0 .5h168" stroke="#FFFFFF" stroke-opacity=".08"/>
+  </g>
+  <rect x=".5" y=".5" width="167" height="31" rx="5.5" fill="none" stroke="#27272A" stroke-opacity=".6"/>
+  <text x="12" y="21.5" fill="#F4F4F5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700">TL</text>
+  <text x="31" y="21.5" fill="#F59E0B" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700">AI</text>
+  <text x="64" y="21" fill="#E4E4E7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="500">Live Studio</text>
+</svg>

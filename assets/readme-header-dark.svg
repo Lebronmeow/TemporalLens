@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="170" viewBox="0 0 960 170" role="img" aria-labelledby="title desc">
+  <title id="title">TemporalLens AI</title>
+  <desc id="desc">Natural Language Video Grounding and Moment Retrieval System</desc>
+  <text x="480" y="105" text-anchor="middle" fill="#F4F4F5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="78" font-weight="700" letter-spacing="-2">TemporalLens<tspan fill="#F59E0B"> AI</tspan></text>
+  <text x="480" y="146" text-anchor="middle" fill="#A1A1AA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="400" letter-spacing="0.5">Video Temporal Grounding &amp; Moment Retrieval Workstation</text>
+</svg>

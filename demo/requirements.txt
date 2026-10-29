@@ -1,0 +1,9 @@
+torch>=2.6.0
+torchvision>=0.21.0
+transformers>=4.57.0
+accelerate>=1.6.0
+gradio>=5.0.0
+qwen-vl-utils[decord]>=0.0.14
+huggingface-hub>=0.34.0
+Pillow
+opencv-python>=4.7.0
