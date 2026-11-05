@@ -468,7 +468,7 @@ def build_presentation():
               "Live Studio: https://temporallens.vercel.app\n"
               "Developer: Lebron Pereira (@Lebronmeow)")
 
-    output_path = "F:/TimeLens2/TemporalLens_Project_Presentation.pptx"
+    output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "TemporalLens_Project_Presentation.pptx")
     prs.save(output_path)
     print(f"Presentation generated successfully: {output_path}")
 
