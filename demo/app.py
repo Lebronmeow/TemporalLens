@@ -773,7 +773,9 @@ def main():
     parser.add_argument("--model", default="MCG-NJU/TimeLens2-2B", help="Model checkpoint")
     parser.add_argument("--load-weights", action="store_true", help="Load full weights")
     parser.add_argument("--port", type=int, default=7860, help="Server port")
+    parser.add_argument("--host", default="127.0.0.1", help="Server host IP (default: 127.0.0.1)")
     parser.add_argument("--share", action="store_true", help="Generate public Gradio URL")
+    parser.add_argument("--no-browser", action="store_true", help="Do not open browser")
     args = parser.parse_args()
 
     if args.load_weights:
@@ -784,7 +786,8 @@ def main():
     for p in range(base_port, base_port + 10):
         try:
             app.launch(
-                server_name="0.0.0.0",
+                server_name=args.host,
+                inbrowser=not args.no_browser,
                 server_port=p,
                 share=args.share,
                 css=TASTE_CSS,
