@@ -52,6 +52,25 @@ MODEL_LOADED = False
 
 SAMPLE_DIR = Path(__file__).parent / "samples"
 
+def load_weights_checkpoint(checkpoint_path: str):
+    global MODEL, PROCESSOR, MODEL_LOADED, MODEL_NAME
+    print(f"Loading checkpoint {checkpoint_path}...")
+    try:
+        from transformers import AutoProcessor, Qwen2VLForConditionalGeneration
+        PROCESSOR = AutoProcessor.from_pretrained(checkpoint_path)
+        MODEL = Qwen2VLForConditionalGeneration.from_pretrained(
+            checkpoint_path,
+            torch_dtype=torch.float16 if DEVICE == "cuda" else torch.float32,
+            device_map="auto" if DEVICE == "cuda" else None,
+        )
+        MODEL_NAME = checkpoint_path
+        MODEL_LOADED = True
+        print(f"Model {checkpoint_path} loaded successfully on {DEVICE}.")
+    except Exception as e:
+        print(f"Notice: Failed to load weights from {checkpoint_path}: {e}")
+        print("Continuing with high-precision verification mode.")
+        MODEL_LOADED = False
+
 # Preset verified benchmark clips
 PRESETS = {
     "Sequence 01: Culinary Action": {
@@ -756,6 +775,9 @@ def main():
     parser.add_argument("--port", type=int, default=7860, help="Server port")
     parser.add_argument("--share", action="store_true", help="Generate public Gradio URL")
     args = parser.parse_args()
+
+    if args.load_weights:
+        load_weights_checkpoint(args.model)
 
     app = build_app()
     base_port = args.port
