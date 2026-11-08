@@ -48,7 +48,7 @@ Developed & Maintained by **[Lebron Pereira](https://github.com/Lebronmeow)**
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Lebronmeow/TemporalLens.git
-   cd TemporalLens\demo
+   cd TemporalLens/demo
    ```
 
 2. **Windows 1-Click Launcher:**
